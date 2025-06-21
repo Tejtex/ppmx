@@ -1,0 +1,32 @@
+Usage
+=====
+
+Learn how to use ppmx to manage your Python projects like a pro.
+
+Basic commands:
+
+- Creating a new virtual environment:
+  
+  .. code-block:: bash
+
+     ppmx create myenv
+
+- Installing packages:
+
+  .. code-block:: bash
+
+     ppmx install requests
+
+- Removing packages:
+
+  .. code-block:: bash
+
+     ppmx remove requests
+
+- Activating environments:
+
+  .. code-block:: bash
+
+     source myenv/bin/activate
+
+Detailed usage instructions and options will be covered here.

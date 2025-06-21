@@ -1,0 +1,12 @@
+Introduction
+============
+
+Welcome to ppmx — the no-bullshit Python package manager designed to keep your projects neat and tidy.
+
+This tool helps you create virtual environments and manage packages without losing your mind.  
+Forget about complicated setups and broken dependencies — ppmx got your back.
+
+Features:
+- Easy virtual environment creation
+- Simple package installation and removal
+- Clean, understandable CLI interface

@@ -1,0 +1,13 @@
+API Reference
+=============
+
+This section documents the internal API modules of ppmx.
+
+Modules:
+
+- **init**: Initialization and setup routines  
+- **run**: Functions to execute scripts in virtual environments  
+- **package**: Package management functions including install/remove  
+- **main**: Main CLI interface and command parsing
+
+Refer to the module documentation below for detailed information.

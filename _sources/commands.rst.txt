@@ -1,0 +1,13 @@
+Commands
+========
+
+ppmx provides several CLI commands to simplify your workflow:
+
+- **create**: Create a new virtual environment  
+- **install**: Install packages into your environment  
+- **remove**: Remove packages from your environment  
+- **list**: List installed packages  
+- **run**: Run scripts inside your environment  
+- **help**: Show help information for commands  
+
+Use `ppmx <command> --help` to get more information about each command.
