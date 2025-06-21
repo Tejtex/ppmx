@@ -2,7 +2,6 @@
 
 import os
 import subprocess
-import tomllib
 from pathlib import Path
 
 import rich
@@ -40,7 +39,7 @@ def add(names: list[str], venv_path: str):
         f.write(freeze_output.stdout)
 
     # Update the pyproject.toml file with the new dependencies
-    file = tomllib.load(Path("pyproject.toml").open("rb"))
+    file = toml.load(Path("pyproject.toml"))
     if "dependencies" not in file["project"]:
         file["project"]["dependencies"] = []
     file["project"]["dependencies"].extend(names)
@@ -80,7 +79,7 @@ def remove(names: list[str], venv_path: str):
         f.write(freeze_output.stdout)
 
     # Update the pyproject.toml file by removing the dependencies
-    file = tomllib.load(Path("pyproject.toml").open("rb"))
+    file = toml.load(Path("pyproject.toml"))
     if "dependencies" in file["project"]:
         file["project"]["dependencies"] = [
             dep for dep in file["project"]["dependencies"] if dep not in names
