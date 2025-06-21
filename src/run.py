@@ -2,7 +2,7 @@
 
 import pathlib
 import subprocess
-import tomllib
+import toml
 
 import rich
 
@@ -14,7 +14,7 @@ def run(command: str):
 
     cwd = pathlib.Path.cwd()
 
-    file = tomllib.load(cwd.joinpath("pyproject.toml").open("rb"))
+    file = toml.load(cwd.joinpath("pyproject.toml"))
 
     tasks = file["tool"]["ppmx"]["tasks"]
 

@@ -23,7 +23,6 @@ def init():
     """Initialize the virtual environment."""
     init_module.init()
 
-
 @cli.command()
 @click.argument("command")
 def run(command: str):
