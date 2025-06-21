@@ -1,13 +1,16 @@
+"""Run a command from the pyproject.toml file"""
 
-import rich
-import questionary
 import pathlib
 import subprocess
 import tomllib
 
+import rich
+
+# pylint: skip-file
+
+
 def run(command: str):
     """Run the command"""
-    
 
     cwd = pathlib.Path.cwd()
 

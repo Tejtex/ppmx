@@ -1,17 +1,18 @@
+"""Initialize the virtual environment and create project files."""
 
-import rich
-import questionary
-import venv
 import pathlib
+import venv
+
+import questionary
+import rich
+
 
 def init():
     """Initialize the virtual environment."""
 
     cwd = pathlib.Path.cwd()
-
     path = questionary.text(
-        "Enter the path to the virtual environment (default: ./venv):",
-        default="./venv"
+        "Enter the path to the virtual environment (default: ./venv):", default="./venv"
     ).ask()
 
     venv.create(path, with_pip=True)
@@ -28,11 +29,12 @@ def init():
     license_type = questionary.select(
         "License type:",
         choices=["MIT", "Apache-2.0", "GPL-3.0", "BSD-3-Clause", "None"],
-        default="MIT"
+        default="MIT",
     ).ask()
 
-    with open(cwd.joinpath("pyproject.toml"), "w") as f:
-        f.write(f"""[project]
+    with open(cwd.joinpath("pyproject.toml"), "w", encoding="UTF-8") as file:
+        file.write(
+            f"""[project]
 name = "{project_name}"
 version = "0.1.0"
 description = "{description}"
@@ -47,22 +49,28 @@ venv_path = "{path}"
 [tool.ppmx.tasks.dev]
 command = "python src/main.py"
 [tool.ppmx.tasks.test]
-command = "pytest"             
-""")
+command = "pytest" """
+        )
     rich.print("[green]pyproject.toml file created.[/green]")
 
     git = questionary.confirm("Initialize a Git repository?", default=True).ask()
     if git:
         try:
-            import git
-            repo = git.Repo.init(cwd)
+            import git  # pylint: disable=import-outside-toplevel
+
+            git.Repo.init(cwd)
             rich.print("[green]Git repository initialized.[/green]")
         except ImportError:
-            rich.print("[red]GitPython is not installed. Skipping Git initialization.[/red]")
-        except Exception as e:
-            rich.print(f"[red]Error initializing Git repository: {e}[/red]")
+            rich.print(
+                "[red]GitPython is not installed. \
+                    Skipping Git initialization.[/red]"
+            )
+        except Exception as error:  # pylint: disable=broad-except
+            rich.print(
+                f"[red]Error initializing Git repository:\
+                        {error}[/red]"
+            )
 
-    
     cwd.joinpath("ppmx.lock").touch()
     rich.print("[green]ppmx.lock file created.[/green]")
     cwd.joinpath("src").mkdir(exist_ok=True)
