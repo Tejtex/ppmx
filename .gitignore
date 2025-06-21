@@ -5,3 +5,5 @@ ppmx.egg-info/
 *.egg
 *.egg-info/
 venv/
+.vscode/
+build/
