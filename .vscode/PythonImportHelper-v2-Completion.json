@@ -179,6 +179,14 @@
         "documentation": {}
     },
     {
+        "label": "version",
+        "importPath": "build.lib.init",
+        "description": "build.lib.init",
+        "isExtraImport": true,
+        "detail": "build.lib.init",
+        "documentation": {}
+    },
+    {
         "label": "init",
         "kind": 2,
         "importPath": "build.lib.init",
@@ -597,7 +605,7 @@
         "kind": 2,
         "importPath": "src.main",
         "description": "src.main",
-        "peekOfCode": "def cli():\n    \"\"\"A command-line interface for managing a Python project with a virtual\n    environment.\"\"\"\n    pass\n@cli.command()\ndef init():\n    \"\"\"Initialize the virtual environment.\"\"\"\n    init_module.init()\n@cli.command()\n@click.argument(\"command\")",
+        "peekOfCode": "def cli(version: bool):\n    \"\"\"A command-line interface for managing a Python project with a virtual\n    environment.\"\"\"\n    if version:\n        rich.print(f\"[blue]ppmx version: {version}[/blue]\")\n        return\n@cli.command()\ndef init():\n    \"\"\"Initialize the virtual environment.\"\"\"\n    init_module.init()",
         "detail": "src.main",
         "documentation": {}
     },

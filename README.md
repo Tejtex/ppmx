@@ -1,6 +1,6 @@
 # ppmx – The Best Package Manager for Python
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Status](https://img.shields.io/badge/status-alpha-red)
+![Version](https://img.shields.io/badge/version-1.0.0-brightgreen)
 ![Platform](https://img.shields.io/badge/platform-cross--platform-lightgrey)
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
 ![Downloads](https://img.shields.io/badge/downloads-∞-blueviolet)

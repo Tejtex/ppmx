@@ -10,13 +10,17 @@ from package import add as add_package
 from package import remove as remove_package
 from package import install as install_package
 from package import update as update_package
+from build.lib.init import version
 
 
 @click.group()
-def cli():
+@click.option("--version", is_flag=True, help="Show the version of ppmx.")
+def cli(version: bool):
     """A command-line interface for managing a Python project with a virtual
     environment."""
-    pass
+    if version:
+        rich.print(f"[blue]ppmx version: {version}[/blue]")
+        return
 
 
 @cli.command()

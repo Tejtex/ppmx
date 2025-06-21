@@ -1,6 +1,6 @@
 [project]
 name = "ppmx"
-version = "0.1.0"
+version = "1.0.0"
 description = "The best python package manager"
 license = "MIT"
 dependencies = [ "click", "toml", "rich", "questionary", "GitPython",]
