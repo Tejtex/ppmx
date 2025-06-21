@@ -4,6 +4,7 @@
 ![Platform](https://img.shields.io/badge/platform-cross--platform-lightgrey)
 ![Coverage](https://img.shields.io/badge/coverage-100%25-brightgreen)
 ![Downloads](https://img.shields.io/badge/downloads-∞-blueviolet)
+
 **Ppmx** is a simple, user-friendly package manager for Python.  
 It aims to make managing dependencies and project scripts easier and cleaner.
 
