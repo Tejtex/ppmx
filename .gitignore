@@ -2,3 +2,6 @@ __pycache__/
 
 *.py[cod]
 ppmx.egg-info/
+*.egg
+*.egg-info/
+venv/

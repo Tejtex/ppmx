@@ -49,17 +49,34 @@ It enables easy creation of virtual environments, package installation, and envi
 <dl class="py function">
 <dt class="sig sig-object py" id="init.init">
 <span class="sig-prename descclassname"><span class="pre">init.</span></span><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#init.init" title="Link to this definition">¶</a></dt>
-<dd><p>Initialize the virtual environment.</p>
+<dd><p>Initialize the virtual environment.
+Create the necessary project files including README.md, pyproject.toml,
+and src/main.py.
+Optionally initialize a Git repository.
+This function prompts the user for various project details such as
+project name, author, description, and license type.
+It also creates a virtual environment in the specified path
+and sets up a basic project structure.</p>
 </dd></dl>
 
 </section>
 <section id="module-run">
 <span id="run-module"></span><h1>run module<a class="headerlink" href="#module-run" title="Link to this heading">¶</a></h1>
-<p>Run a command from the pyproject.toml file</p>
+<p>Run a task from the pyproject.toml file</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="run.run">
 <span class="sig-prename descclassname"><span class="pre">run.</span></span><span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">command</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#run.run" title="Link to this definition">¶</a></dt>
-<dd><p>Run the command</p>
+<dd><p>Run the task defined in the pyproject.toml file.
+:param command: The name of the command to run, as defined in the tasks section of pyproject.toml.
+:type command: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>ValueError</strong> – If the command is not found in the tasks section of pyproject.toml.</p></li>
+<li><p><strong>subprocess.CalledProcessError</strong> – If the command fails to execute.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
@@ -69,7 +86,20 @@ It enables easy creation of virtual environments, package installation, and envi
 <dl class="py function">
 <dt class="sig sig-object py" id="package.add">
 <span class="sig-prename descclassname"><span class="pre">package.</span></span><span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">venv_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#package.add" title="Link to this definition">¶</a></dt>
-<dd><p>Install packages in the virtual environment and update the lock file and pyproject.toml.</p>
+<dd><p>Install packages in the virtual environment and update the lock file and pyproject.toml.
+:param names: List of package names to install.
+:type names: list[str]
+:param venv_path: Path to the virtual environment.
+:type venv_path: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>FileNotFoundError</strong> – If pip is not found in the virtual environment.</p></li>
+<li><p><strong>RuntimeError</strong> – If the pip install command fails.</p></li>
+<li><p><strong>Exception</strong> – For any other unexpected errors.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py function">
@@ -82,6 +112,25 @@ It enables easy creation of virtual environments, package installation, and envi
 <dt class="sig sig-object py" id="package.install">
 <span class="sig-prename descclassname"><span class="pre">package.</span></span><span class="sig-name descname"><span class="pre">install</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">venv_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#package.install" title="Link to this definition">¶</a></dt>
 <dd><p>Install all dependencies from the ppmx.lock file.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="package.update">
+<span class="sig-prename descclassname"><span class="pre">package.</span></span><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">names</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">venv_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">all</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#package.update" title="Link to this definition">¶</a></dt>
+<dd><p>Update packages in the virtual environment and update the lock file and pyproject.toml.
+:param names: List of package names to update.
+:type names: list[str]
+:param venv_path: Path to the virtual environment.
+:type venv_path: str</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>FileNotFoundError</strong> – If pip is not found in the virtual environment.</p></li>
+<li><p><strong>RuntimeError</strong> – If the pip install command fails.</p></li>
+<li><p><strong>Exception</strong> – For any other unexpected errors.</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </section>
