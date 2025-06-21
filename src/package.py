@@ -11,7 +11,17 @@ import toml
 
 
 def add(names: list[str], venv_path: str):
-    """Install packages in the virtual environment and update the lock file and pyproject.toml."""
+    """
+    Install packages in the virtual environment and update the lock file and pyproject.toml.
+    Args:
+        names (list[str]): List of package names to install.
+        venv_path (str): Path to the virtual environment.
+    Raises:
+        FileNotFoundError: If pip is not found in the virtual environment.
+        RuntimeError: If the pip install command fails.
+        Exception: For any other unexpected errors.
+        
+    """
     venv: Path = Path(venv_path)
     if os.name == "nt":  # Windows
         pip_path = venv / "Scripts" / "pip.exe"

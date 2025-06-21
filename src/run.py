@@ -1,4 +1,6 @@
-"""Run a command from the pyproject.toml file"""
+"""
+Run a task from the pyproject.toml file
+"""
 
 import pathlib
 import subprocess
@@ -10,7 +12,14 @@ import rich
 
 
 def run(command: str):
-    """Run the command"""
+    """
+    Run the task defined in the pyproject.toml file.
+    Args:
+        command (str): The name of the command to run, as defined in the tasks section of pyproject.toml.
+    Raises:
+        ValueError: If the command is not found in the tasks section of pyproject.toml.
+        subprocess.CalledProcessError: If the command fails to execute.
+    """
 
     cwd = pathlib.Path.cwd()
 
