@@ -1,0 +1,703 @@
+[
+    {
+        "label": "pathlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "venv",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "venv",
+        "description": "venv",
+        "detail": "venv",
+        "documentation": {}
+    },
+    {
+        "label": "questionary",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "questionary",
+        "description": "questionary",
+        "detail": "questionary",
+        "documentation": {}
+    },
+    {
+        "label": "rich",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "rich",
+        "description": "rich",
+        "detail": "rich",
+        "documentation": {}
+    },
+    {
+        "label": "click",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "click",
+        "description": "click",
+        "detail": "click",
+        "documentation": {}
+    },
+    {
+        "label": "init",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "init",
+        "description": "init",
+        "detail": "init",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "run",
+        "description": "run",
+        "detail": "run",
+        "documentation": {}
+    },
+    {
+        "label": "add",
+        "importPath": "package",
+        "description": "package",
+        "isExtraImport": true,
+        "detail": "package",
+        "documentation": {}
+    },
+    {
+        "label": "remove",
+        "importPath": "package",
+        "description": "package",
+        "isExtraImport": true,
+        "detail": "package",
+        "documentation": {}
+    },
+    {
+        "label": "install",
+        "importPath": "package",
+        "description": "package",
+        "isExtraImport": true,
+        "detail": "package",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "importPath": "package",
+        "description": "package",
+        "isExtraImport": true,
+        "detail": "package",
+        "documentation": {}
+    },
+    {
+        "label": "add",
+        "importPath": "package",
+        "description": "package",
+        "isExtraImport": true,
+        "detail": "package",
+        "documentation": {}
+    },
+    {
+        "label": "remove",
+        "importPath": "package",
+        "description": "package",
+        "isExtraImport": true,
+        "detail": "package",
+        "documentation": {}
+    },
+    {
+        "label": "install",
+        "importPath": "package",
+        "description": "package",
+        "isExtraImport": true,
+        "detail": "package",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "importPath": "package",
+        "description": "package",
+        "isExtraImport": true,
+        "detail": "package",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "subprocess",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "subprocess",
+        "description": "subprocess",
+        "detail": "subprocess",
+        "documentation": {}
+    },
+    {
+        "label": "toml",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "toml",
+        "description": "toml",
+        "detail": "toml",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "init",
+        "kind": 2,
+        "importPath": "build.lib.init",
+        "description": "build.lib.init",
+        "peekOfCode": "def init():\n    \"\"\"\n    Initialize the virtual environment.\n    Create the necessary project files including README.md, pyproject.toml,\n    and src/main.py.\n    Optionally initialize a Git repository.\n    This function prompts the user for various project details such as\n    project name, author, description, and license type.\n    It also creates a virtual environment in the specified path\n    and sets up a basic project structure.",
+        "detail": "build.lib.init",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "build.lib.init",
+        "description": "build.lib.init",
+        "peekOfCode": "name = \"{project_name}\"\nversion = \"0.1.0\"\ndescription = \"{description}\"\nauthors = [\"{author}\"]\nlicense = \"{license_type}\"\ndependencies = []\n[build-system]\nrequires = [\"setuptools\", \"wheel\"]\nbuild-backend = \"setuptools.build_meta\"\n[tool.ppmx]",
+        "detail": "build.lib.init",
+        "documentation": {}
+    },
+    {
+        "label": "version",
+        "kind": 5,
+        "importPath": "build.lib.init",
+        "description": "build.lib.init",
+        "peekOfCode": "version = \"0.1.0\"\ndescription = \"{description}\"\nauthors = [\"{author}\"]\nlicense = \"{license_type}\"\ndependencies = []\n[build-system]\nrequires = [\"setuptools\", \"wheel\"]\nbuild-backend = \"setuptools.build_meta\"\n[tool.ppmx]\nvenv_path = \"{path}\"",
+        "detail": "build.lib.init",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "build.lib.init",
+        "description": "build.lib.init",
+        "peekOfCode": "description = \"{description}\"\nauthors = [\"{author}\"]\nlicense = \"{license_type}\"\ndependencies = []\n[build-system]\nrequires = [\"setuptools\", \"wheel\"]\nbuild-backend = \"setuptools.build_meta\"\n[tool.ppmx]\nvenv_path = \"{path}\"\n[tool.ppmx.tasks.dev]",
+        "detail": "build.lib.init",
+        "documentation": {}
+    },
+    {
+        "label": "authors",
+        "kind": 5,
+        "importPath": "build.lib.init",
+        "description": "build.lib.init",
+        "peekOfCode": "authors = [\"{author}\"]\nlicense = \"{license_type}\"\ndependencies = []\n[build-system]\nrequires = [\"setuptools\", \"wheel\"]\nbuild-backend = \"setuptools.build_meta\"\n[tool.ppmx]\nvenv_path = \"{path}\"\n[tool.ppmx.tasks.dev]\ncommand = \"python src/main.py\"",
+        "detail": "build.lib.init",
+        "documentation": {}
+    },
+    {
+        "label": "license",
+        "kind": 5,
+        "importPath": "build.lib.init",
+        "description": "build.lib.init",
+        "peekOfCode": "license = \"{license_type}\"\ndependencies = []\n[build-system]\nrequires = [\"setuptools\", \"wheel\"]\nbuild-backend = \"setuptools.build_meta\"\n[tool.ppmx]\nvenv_path = \"{path}\"\n[tool.ppmx.tasks.dev]\ncommand = \"python src/main.py\"\n[tool.ppmx.tasks.test]",
+        "detail": "build.lib.init",
+        "documentation": {}
+    },
+    {
+        "label": "dependencies",
+        "kind": 5,
+        "importPath": "build.lib.init",
+        "description": "build.lib.init",
+        "peekOfCode": "dependencies = []\n[build-system]\nrequires = [\"setuptools\", \"wheel\"]\nbuild-backend = \"setuptools.build_meta\"\n[tool.ppmx]\nvenv_path = \"{path}\"\n[tool.ppmx.tasks.dev]\ncommand = \"python src/main.py\"\n[tool.ppmx.tasks.test]\ncommand = \"pytest\" \"\"\"",
+        "detail": "build.lib.init",
+        "documentation": {}
+    },
+    {
+        "label": "requires",
+        "kind": 5,
+        "importPath": "build.lib.init",
+        "description": "build.lib.init",
+        "peekOfCode": "requires = [\"setuptools\", \"wheel\"]\nbuild-backend = \"setuptools.build_meta\"\n[tool.ppmx]\nvenv_path = \"{path}\"\n[tool.ppmx.tasks.dev]\ncommand = \"python src/main.py\"\n[tool.ppmx.tasks.test]\ncommand = \"pytest\" \"\"\"\n        )\n    rich.print(\"[green]pyproject.toml file created.[/green]\")",
+        "detail": "build.lib.init",
+        "documentation": {}
+    },
+    {
+        "label": "build-backend",
+        "kind": 5,
+        "importPath": "build.lib.init",
+        "description": "build.lib.init",
+        "peekOfCode": "build-backend = \"setuptools.build_meta\"\n[tool.ppmx]\nvenv_path = \"{path}\"\n[tool.ppmx.tasks.dev]\ncommand = \"python src/main.py\"\n[tool.ppmx.tasks.test]\ncommand = \"pytest\" \"\"\"\n        )\n    rich.print(\"[green]pyproject.toml file created.[/green]\")\n    git = questionary.confirm(\"Initialize a Git repository?\", default=True).ask()",
+        "detail": "build.lib.init",
+        "documentation": {}
+    },
+    {
+        "label": "venv_path",
+        "kind": 5,
+        "importPath": "build.lib.init",
+        "description": "build.lib.init",
+        "peekOfCode": "venv_path = \"{path}\"\n[tool.ppmx.tasks.dev]\ncommand = \"python src/main.py\"\n[tool.ppmx.tasks.test]\ncommand = \"pytest\" \"\"\"\n        )\n    rich.print(\"[green]pyproject.toml file created.[/green]\")\n    git = questionary.confirm(\"Initialize a Git repository?\", default=True).ask()\n    if git:\n        try:",
+        "detail": "build.lib.init",
+        "documentation": {}
+    },
+    {
+        "label": "command",
+        "kind": 5,
+        "importPath": "build.lib.init",
+        "description": "build.lib.init",
+        "peekOfCode": "command = \"python src/main.py\"\n[tool.ppmx.tasks.test]\ncommand = \"pytest\" \"\"\"\n        )\n    rich.print(\"[green]pyproject.toml file created.[/green]\")\n    git = questionary.confirm(\"Initialize a Git repository?\", default=True).ask()\n    if git:\n        try:\n            import git  # pylint: disable=import-outside-toplevel\n            git.Repo.init(cwd)",
+        "detail": "build.lib.init",
+        "documentation": {}
+    },
+    {
+        "label": "command",
+        "kind": 5,
+        "importPath": "build.lib.init",
+        "description": "build.lib.init",
+        "peekOfCode": "command = \"pytest\" \"\"\"\n        )\n    rich.print(\"[green]pyproject.toml file created.[/green]\")\n    git = questionary.confirm(\"Initialize a Git repository?\", default=True).ask()\n    if git:\n        try:\n            import git  # pylint: disable=import-outside-toplevel\n            git.Repo.init(cwd)\n            rich.print(\"[green]Git repository initialized.[/green]\")\n        except ImportError:",
+        "detail": "build.lib.init",
+        "documentation": {}
+    },
+    {
+        "label": "cli",
+        "kind": 2,
+        "importPath": "build.lib.main",
+        "description": "build.lib.main",
+        "peekOfCode": "def cli():\n    \"\"\"A command-line interface for managing a Python project with a virtual\n    environment.\"\"\"\n    pass\n@cli.command()\ndef init():\n    \"\"\"Initialize the virtual environment.\"\"\"\n    init_module.init()\n@cli.command()\n@click.argument(\"command\")",
+        "detail": "build.lib.main",
+        "documentation": {}
+    },
+    {
+        "label": "init",
+        "kind": 2,
+        "importPath": "build.lib.main",
+        "description": "build.lib.main",
+        "peekOfCode": "def init():\n    \"\"\"Initialize the virtual environment.\"\"\"\n    init_module.init()\n@cli.command()\n@click.argument(\"command\")\ndef run(command: str):\n    \"\"\"Run a command from the tasks defined in pyproject.toml.\"\"\"\n    try:\n        run_module.run(command)\n    except ImportError as e:",
+        "detail": "build.lib.main",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "kind": 2,
+        "importPath": "build.lib.main",
+        "description": "build.lib.main",
+        "peekOfCode": "def run(command: str):\n    \"\"\"Run a command from the tasks defined in pyproject.toml.\"\"\"\n    try:\n        run_module.run(command)\n    except ImportError as e:\n        rich.print(f\"[red]Error importing module: {e}[/red]\")\n    except ValueError as e:\n        rich.print(f\"[red]Error: {e}[/red]\")\n@cli.command()\n@click.argument(\"names\", nargs=-1)",
+        "detail": "build.lib.main",
+        "documentation": {}
+    },
+    {
+        "label": "add",
+        "kind": 2,
+        "importPath": "build.lib.main",
+        "description": "build.lib.main",
+        "peekOfCode": "def add(names: list[str]):\n    \"\"\"Add packages to the virtual environment.\"\"\"\n    if not names:\n        rich.print(\n            \"[red]No package names provided. Please specify at least one package.[/red]\"\n        )\n        return\n    try:\n        add_package(names, venv_path=\"venv\")\n    except FileNotFoundError as e:",
+        "detail": "build.lib.main",
+        "documentation": {}
+    },
+    {
+        "label": "remove",
+        "kind": 2,
+        "importPath": "build.lib.main",
+        "description": "build.lib.main",
+        "peekOfCode": "def remove(names: list[str]):\n    \"\"\"Remove packages from the virtual environment.\"\"\"\n    if not names:\n        rich.print(\n            \"[red]No package names provided. Please specify at least one\\\n                   package to remove.[/red]\"\n        )\n        return\n    try:\n        remove_package(names, venv_path=\"venv\")",
+        "detail": "build.lib.main",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 2,
+        "importPath": "build.lib.main",
+        "description": "build.lib.main",
+        "peekOfCode": "def update(names: list[str], all: bool = False):\n    \"\"\"Update packages in the virtual environment.\"\"\"\n    if not names and not all:\n        rich.print(\n            \"[red]No package names provided. Please specify at least one package to update.[/red]\"\n        )\n        return\n    try:\n        update_package(names, venv_path=\"venv\", all=all)\n    except FileNotFoundError as e:",
+        "detail": "build.lib.main",
+        "documentation": {}
+    },
+    {
+        "label": "install",
+        "kind": 2,
+        "importPath": "build.lib.main",
+        "description": "build.lib.main",
+        "peekOfCode": "def install():\n    \"\"\"Install all dependencies from the ppmx.lock file.\"\"\"\n    install_package(venv_path=\"venv\")\nif __name__ == \"__main__\":\n    try:\n        cli()\n    except Exception as e:\n        rich.print(f\"[red]Error:[/red] {e}\")",
+        "detail": "build.lib.main",
+        "documentation": {}
+    },
+    {
+        "label": "add",
+        "kind": 2,
+        "importPath": "build.lib.package",
+        "description": "build.lib.package",
+        "peekOfCode": "def add(names: list[str], venv_path: str):\n    \"\"\"\n    Install packages in the virtual environment and update the lock file and pyproject.toml.\n    Args:\n        names (list[str]): List of package names to install.\n        venv_path (str): Path to the virtual environment.\n    Raises:\n        FileNotFoundError: If pip is not found in the virtual environment.\n        RuntimeError: If the pip install command fails.\n        Exception: For any other unexpected errors.",
+        "detail": "build.lib.package",
+        "documentation": {}
+    },
+    {
+        "label": "remove",
+        "kind": 2,
+        "importPath": "build.lib.package",
+        "description": "build.lib.package",
+        "peekOfCode": "def remove(names: list[str], venv_path: str):\n    \"\"\"Remove packages from the virtual environment and update the lock file and pyproject.toml.\"\"\"\n    venv: Path = Path(venv_path)\n    if os.name == \"nt\":  # Windows\n        pip_path = venv / \"Scripts\" / \"pip.exe\"\n    else:  # Linux / macOS\n        pip_path = venv / \"bin\" / \"pip\"\n    if not pip_path.exists():\n        raise FileNotFoundError(\n            f\"pip not found at {pip_path}. \\",
+        "detail": "build.lib.package",
+        "documentation": {}
+    },
+    {
+        "label": "install",
+        "kind": 2,
+        "importPath": "build.lib.package",
+        "description": "build.lib.package",
+        "peekOfCode": "def install(venv_path: str):\n    \"\"\"Install all dependencies from the ppmx.lock file.\"\"\"\n    venv: Path = Path(venv_path)\n    if os.name == \"nt\":  # Windows\n        pip_path = venv / \"Scripts\" / \"pip.exe\"\n    else:  # Linux / macOS\n        pip_path = venv / \"bin\" / \"pip\"\n    if not pip_path.exists():\n        raise FileNotFoundError(\n            f\"pip not found at {pip_path}. \\",
+        "detail": "build.lib.package",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 2,
+        "importPath": "build.lib.package",
+        "description": "build.lib.package",
+        "peekOfCode": "def update(names: list[str], venv_path: str, all: bool = False):\n    \"\"\"\n    Update packages in the virtual environment and update the lock file and pyproject.toml.\n    Args:\n        names (list[str]): List of package names to update.\n        venv_path (str): Path to the virtual environment.\n    Raises:\n        FileNotFoundError: If pip is not found in the virtual environment.\n        RuntimeError: If the pip install command fails.\n        Exception: For any other unexpected errors.",
+        "detail": "build.lib.package",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "kind": 2,
+        "importPath": "build.lib.run",
+        "description": "build.lib.run",
+        "peekOfCode": "def run(command: str):\n    \"\"\"\n    Run the task defined in the pyproject.toml file.\n    Args:\n        command (str): The name of the command to run, as defined in the tasks section of pyproject.toml.\n    Raises:\n        ValueError: If the command is not found in the tasks section of pyproject.toml.\n        subprocess.CalledProcessError: If the command fails to execute.\n    \"\"\"\n    cwd = pathlib.Path.cwd()",
+        "detail": "build.lib.run",
+        "documentation": {}
+    },
+    {
+        "label": "project",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "project = 'ppmx'\ncopyright = '2025, Tejtex'\nauthor = 'Tejtex'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = [\n    'sphinx.ext.autodoc',\n    'sphinx.ext.autosummary',\n    'sphinx.ext.napoleon',\n]",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "copyright",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "copyright = '2025, Tejtex'\nauthor = 'Tejtex'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = [\n    'sphinx.ext.autodoc',\n    'sphinx.ext.autosummary',\n    'sphinx.ext.napoleon',\n]\nautosummary_generate = True",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "author",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "author = 'Tejtex'\n# -- General configuration ---------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration\nextensions = [\n    'sphinx.ext.autodoc',\n    'sphinx.ext.autosummary',\n    'sphinx.ext.napoleon',\n]\nautosummary_generate = True\nautodoc_member_order = 'bysource'",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "extensions",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "extensions = [\n    'sphinx.ext.autodoc',\n    'sphinx.ext.autosummary',\n    'sphinx.ext.napoleon',\n]\nautosummary_generate = True\nautodoc_member_order = 'bysource'\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\n# -- Options for HTML output -------------------------------------------------",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "autosummary_generate",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "autosummary_generate = True\nautodoc_member_order = 'bysource'\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'alabaster'\nhtml_static_path = ['_static']\nimport os\nimport sys",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "autodoc_member_order",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "autodoc_member_order = 'bysource'\ntemplates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'alabaster'\nhtml_static_path = ['_static']\nimport os\nimport sys\nsys.path.insert(0, os.path.abspath('./src'))",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "templates_path",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "templates_path = ['_templates']\nexclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'alabaster'\nhtml_static_path = ['_static']\nimport os\nimport sys\nsys.path.insert(0, os.path.abspath('./src'))",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "exclude_patterns",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']\n# -- Options for HTML output -------------------------------------------------\n# https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output\nhtml_theme = 'alabaster'\nhtml_static_path = ['_static']\nimport os\nimport sys\nsys.path.insert(0, os.path.abspath('./src'))",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_theme",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "html_theme = 'alabaster'\nhtml_static_path = ['_static']\nimport os\nimport sys\nsys.path.insert(0, os.path.abspath('./src'))",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "html_static_path",
+        "kind": 5,
+        "importPath": "docs.conf",
+        "description": "docs.conf",
+        "peekOfCode": "html_static_path = ['_static']\nimport os\nimport sys\nsys.path.insert(0, os.path.abspath('./src'))",
+        "detail": "docs.conf",
+        "documentation": {}
+    },
+    {
+        "label": "init",
+        "kind": 2,
+        "importPath": "src.init",
+        "description": "src.init",
+        "peekOfCode": "def init():\n    \"\"\"\n    Initialize the virtual environment.\n    Create the necessary project files including README.md, pyproject.toml,\n    and src/main.py.\n    Optionally initialize a Git repository.\n    This function prompts the user for various project details such as\n    project name, author, description, and license type.\n    It also creates a virtual environment in the specified path\n    and sets up a basic project structure.",
+        "detail": "src.init",
+        "documentation": {}
+    },
+    {
+        "label": "name",
+        "kind": 5,
+        "importPath": "src.init",
+        "description": "src.init",
+        "peekOfCode": "name = \"{project_name}\"\nversion = \"0.1.0\"\ndescription = \"{description}\"\nauthors = [\"{author}\"]\nlicense = \"{license_type}\"\ndependencies = []\n[build-system]\nrequires = [\"setuptools\", \"wheel\"]\nbuild-backend = \"setuptools.build_meta\"\n[tool.ppmx]",
+        "detail": "src.init",
+        "documentation": {}
+    },
+    {
+        "label": "version",
+        "kind": 5,
+        "importPath": "src.init",
+        "description": "src.init",
+        "peekOfCode": "version = \"0.1.0\"\ndescription = \"{description}\"\nauthors = [\"{author}\"]\nlicense = \"{license_type}\"\ndependencies = []\n[build-system]\nrequires = [\"setuptools\", \"wheel\"]\nbuild-backend = \"setuptools.build_meta\"\n[tool.ppmx]\nvenv_path = \"{path}\"",
+        "detail": "src.init",
+        "documentation": {}
+    },
+    {
+        "label": "description",
+        "kind": 5,
+        "importPath": "src.init",
+        "description": "src.init",
+        "peekOfCode": "description = \"{description}\"\nauthors = [\"{author}\"]\nlicense = \"{license_type}\"\ndependencies = []\n[build-system]\nrequires = [\"setuptools\", \"wheel\"]\nbuild-backend = \"setuptools.build_meta\"\n[tool.ppmx]\nvenv_path = \"{path}\"\n[tool.ppmx.tasks.dev]",
+        "detail": "src.init",
+        "documentation": {}
+    },
+    {
+        "label": "authors",
+        "kind": 5,
+        "importPath": "src.init",
+        "description": "src.init",
+        "peekOfCode": "authors = [\"{author}\"]\nlicense = \"{license_type}\"\ndependencies = []\n[build-system]\nrequires = [\"setuptools\", \"wheel\"]\nbuild-backend = \"setuptools.build_meta\"\n[tool.ppmx]\nvenv_path = \"{path}\"\n[tool.ppmx.tasks.dev]\ncommand = \"python src/main.py\"",
+        "detail": "src.init",
+        "documentation": {}
+    },
+    {
+        "label": "license",
+        "kind": 5,
+        "importPath": "src.init",
+        "description": "src.init",
+        "peekOfCode": "license = \"{license_type}\"\ndependencies = []\n[build-system]\nrequires = [\"setuptools\", \"wheel\"]\nbuild-backend = \"setuptools.build_meta\"\n[tool.ppmx]\nvenv_path = \"{path}\"\n[tool.ppmx.tasks.dev]\ncommand = \"python src/main.py\"\n[tool.ppmx.tasks.test]",
+        "detail": "src.init",
+        "documentation": {}
+    },
+    {
+        "label": "dependencies",
+        "kind": 5,
+        "importPath": "src.init",
+        "description": "src.init",
+        "peekOfCode": "dependencies = []\n[build-system]\nrequires = [\"setuptools\", \"wheel\"]\nbuild-backend = \"setuptools.build_meta\"\n[tool.ppmx]\nvenv_path = \"{path}\"\n[tool.ppmx.tasks.dev]\ncommand = \"python src/main.py\"\n[tool.ppmx.tasks.test]\ncommand = \"pytest\" \"\"\"",
+        "detail": "src.init",
+        "documentation": {}
+    },
+    {
+        "label": "requires",
+        "kind": 5,
+        "importPath": "src.init",
+        "description": "src.init",
+        "peekOfCode": "requires = [\"setuptools\", \"wheel\"]\nbuild-backend = \"setuptools.build_meta\"\n[tool.ppmx]\nvenv_path = \"{path}\"\n[tool.ppmx.tasks.dev]\ncommand = \"python src/main.py\"\n[tool.ppmx.tasks.test]\ncommand = \"pytest\" \"\"\"\n        )\n    rich.print(\"[green]pyproject.toml file created.[/green]\")",
+        "detail": "src.init",
+        "documentation": {}
+    },
+    {
+        "label": "build-backend",
+        "kind": 5,
+        "importPath": "src.init",
+        "description": "src.init",
+        "peekOfCode": "build-backend = \"setuptools.build_meta\"\n[tool.ppmx]\nvenv_path = \"{path}\"\n[tool.ppmx.tasks.dev]\ncommand = \"python src/main.py\"\n[tool.ppmx.tasks.test]\ncommand = \"pytest\" \"\"\"\n        )\n    rich.print(\"[green]pyproject.toml file created.[/green]\")\n    git = questionary.confirm(\"Initialize a Git repository?\", default=True).ask()",
+        "detail": "src.init",
+        "documentation": {}
+    },
+    {
+        "label": "venv_path",
+        "kind": 5,
+        "importPath": "src.init",
+        "description": "src.init",
+        "peekOfCode": "venv_path = \"{path}\"\n[tool.ppmx.tasks.dev]\ncommand = \"python src/main.py\"\n[tool.ppmx.tasks.test]\ncommand = \"pytest\" \"\"\"\n        )\n    rich.print(\"[green]pyproject.toml file created.[/green]\")\n    git = questionary.confirm(\"Initialize a Git repository?\", default=True).ask()\n    if git:\n        try:",
+        "detail": "src.init",
+        "documentation": {}
+    },
+    {
+        "label": "command",
+        "kind": 5,
+        "importPath": "src.init",
+        "description": "src.init",
+        "peekOfCode": "command = \"python src/main.py\"\n[tool.ppmx.tasks.test]\ncommand = \"pytest\" \"\"\"\n        )\n    rich.print(\"[green]pyproject.toml file created.[/green]\")\n    git = questionary.confirm(\"Initialize a Git repository?\", default=True).ask()\n    if git:\n        try:\n            import git  # pylint: disable=import-outside-toplevel\n            git.Repo.init(cwd)",
+        "detail": "src.init",
+        "documentation": {}
+    },
+    {
+        "label": "command",
+        "kind": 5,
+        "importPath": "src.init",
+        "description": "src.init",
+        "peekOfCode": "command = \"pytest\" \"\"\"\n        )\n    rich.print(\"[green]pyproject.toml file created.[/green]\")\n    git = questionary.confirm(\"Initialize a Git repository?\", default=True).ask()\n    if git:\n        try:\n            import git  # pylint: disable=import-outside-toplevel\n            git.Repo.init(cwd)\n            rich.print(\"[green]Git repository initialized.[/green]\")\n        except ImportError:",
+        "detail": "src.init",
+        "documentation": {}
+    },
+    {
+        "label": "cli",
+        "kind": 2,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "def cli():\n    \"\"\"A command-line interface for managing a Python project with a virtual\n    environment.\"\"\"\n    pass\n@cli.command()\ndef init():\n    \"\"\"Initialize the virtual environment.\"\"\"\n    init_module.init()\n@cli.command()\n@click.argument(\"command\")",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "init",
+        "kind": 2,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "def init():\n    \"\"\"Initialize the virtual environment.\"\"\"\n    init_module.init()\n@cli.command()\n@click.argument(\"command\")\ndef run(command: str):\n    \"\"\"Run a command from the tasks defined in pyproject.toml.\"\"\"\n    try:\n        run_module.run(command)\n    except ImportError as e:",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "kind": 2,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "def run(command: str):\n    \"\"\"Run a command from the tasks defined in pyproject.toml.\"\"\"\n    try:\n        run_module.run(command)\n    except ImportError as e:\n        rich.print(f\"[red]Error importing module: {e}[/red]\")\n    except ValueError as e:\n        rich.print(f\"[red]Error: {e}[/red]\")\n@cli.command()\n@click.argument(\"names\", nargs=-1)",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "add",
+        "kind": 2,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "def add(names: list[str]):\n    \"\"\"Add packages to the virtual environment.\"\"\"\n    if not names:\n        rich.print(\n            \"[red]No package names provided. Please specify at least one package.[/red]\"\n        )\n        return\n    try:\n        add_package(names, venv_path=\"venv\")\n    except FileNotFoundError as e:",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "remove",
+        "kind": 2,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "def remove(names: list[str]):\n    \"\"\"Remove packages from the virtual environment.\"\"\"\n    if not names:\n        rich.print(\n            \"[red]No package names provided. Please specify at least one\\\n                   package to remove.[/red]\"\n        )\n        return\n    try:\n        remove_package(names, venv_path=\"venv\")",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 2,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "def update(names: list[str], all: bool = False):\n    \"\"\"Update packages in the virtual environment.\"\"\"\n    if not names and not all:\n        rich.print(\n            \"[red]No package names provided. Please specify at least one package to update.[/red]\"\n        )\n        return\n    try:\n        update_package(names, venv_path=\"venv\", all=all)\n    except FileNotFoundError as e:",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "install",
+        "kind": 2,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "def install():\n    \"\"\"Install all dependencies from the ppmx.lock file.\"\"\"\n    install_package(venv_path=\"venv\")\nif __name__ == \"__main__\":\n    try:\n        cli()\n    except Exception as e:\n        rich.print(f\"[red]Error:[/red] {e}\")",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "add",
+        "kind": 2,
+        "importPath": "src.package",
+        "description": "src.package",
+        "peekOfCode": "def add(names: list[str], venv_path: str):\n    \"\"\"\n    Install packages in the virtual environment and update the lock file and pyproject.toml.\n    Args:\n        names (list[str]): List of package names to install.\n        venv_path (str): Path to the virtual environment.\n    Raises:\n        FileNotFoundError: If pip is not found in the virtual environment.\n        RuntimeError: If the pip install command fails.\n        Exception: For any other unexpected errors.",
+        "detail": "src.package",
+        "documentation": {}
+    },
+    {
+        "label": "remove",
+        "kind": 2,
+        "importPath": "src.package",
+        "description": "src.package",
+        "peekOfCode": "def remove(names: list[str], venv_path: str):\n    \"\"\"Remove packages from the virtual environment and update the lock file and pyproject.toml.\"\"\"\n    venv: Path = Path(venv_path)\n    if os.name == \"nt\":  # Windows\n        pip_path = venv / \"Scripts\" / \"pip.exe\"\n    else:  # Linux / macOS\n        pip_path = venv / \"bin\" / \"pip\"\n    if not pip_path.exists():\n        raise FileNotFoundError(\n            f\"pip not found at {pip_path}. Ensure the virtual environment is set up correctly.\"",
+        "detail": "src.package",
+        "documentation": {}
+    },
+    {
+        "label": "install",
+        "kind": 2,
+        "importPath": "src.package",
+        "description": "src.package",
+        "peekOfCode": "def install(venv_path: str):\n    \"\"\"Install all dependencies from the ppmx.lock file.\"\"\"\n    venv: Path = Path(venv_path)\n    if os.name == \"nt\":  # Windows\n        pip_path = venv / \"Scripts\" / \"pip.exe\"\n    else:  # Linux / macOS\n        pip_path = venv / \"bin\" / \"pip\"\n    if not pip_path.exists():\n        raise FileNotFoundError(\n            f\"pip not found at {pip_path}. Ensure the virtual environment is set up correctly.\"",
+        "detail": "src.package",
+        "documentation": {}
+    },
+    {
+        "label": "update",
+        "kind": 2,
+        "importPath": "src.package",
+        "description": "src.package",
+        "peekOfCode": "def update(names: list[str], venv_path: str, all: bool = False):\n    \"\"\"\n    Update packages in the virtual environment and update the lock file and pyproject.toml.\n    Args:\n        names (list[str]): List of package names to update.\n        venv_path (str): Path to the virtual environment.\n    Raises:\n        FileNotFoundError: If pip is not found in the virtual environment.\n        RuntimeError: If the pip install command fails.\n        Exception: For any other unexpected errors.",
+        "detail": "src.package",
+        "documentation": {}
+    },
+    {
+        "label": "run",
+        "kind": 2,
+        "importPath": "src.run",
+        "description": "src.run",
+        "peekOfCode": "def run(command: str):\n    \"\"\"\n    Run the task defined in the pyproject.toml file.\n    Args:\n        command (str): The name of the command to run, as defined in the tasks section of pyproject.toml.\n    Raises:\n        ValueError: If the command is not found in the tasks section of pyproject.toml.\n        subprocess.CalledProcessError: If the command fails to execute.\n    \"\"\"\n    cwd = pathlib.Path.cwd()",
+        "detail": "src.run",
+        "documentation": {}
+    }
+]

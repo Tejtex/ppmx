@@ -8,7 +8,16 @@ import rich
 
 
 def init():
-    """Initialize the virtual environment."""
+    """
+    Initialize the virtual environment.
+    Create the necessary project files including README.md, pyproject.toml,
+    and src/main.py.
+    Optionally initialize a Git repository.
+    This function prompts the user for various project details such as
+    project name, author, description, and license type.
+    It also creates a virtual environment in the specified path
+    and sets up a basic project structure.
+    """
 
     cwd = pathlib.Path.cwd()
     path = questionary.text(
@@ -62,13 +71,11 @@ command = "pytest" """
             rich.print("[green]Git repository initialized.[/green]")
         except ImportError:
             rich.print(
-                "[red]GitPython is not installed. \
-                    Skipping Git initialization.[/red]"
+                "[red]GitPython is not installed. Skipping Git initialization.[/red]"
             )
         except Exception as error:  # pylint: disable=broad-except
             rich.print(
-                f"[red]Error initializing Git repository:\
-                        {error}[/red]"
+                f"[red]Error initializing Git repository: {error}[/red]"
             )
 
     cwd.joinpath("ppmx.lock").touch()

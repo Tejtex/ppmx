@@ -8,6 +8,9 @@
 **Ppmx** is a simple, user-friendly package manager for Python.  
 It aims to make managing dependencies and project scripts easier and cleaner.
 
+## DOCUMENTATION
+https://tejtex.github.io/ppmx/
+
 ## Features
 
 - Easy CLI interface  

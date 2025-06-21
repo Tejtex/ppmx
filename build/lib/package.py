@@ -2,7 +2,6 @@
 
 import os
 import subprocess
-import tomllib
 from pathlib import Path
 
 import rich
@@ -12,7 +11,17 @@ import toml
 
 
 def add(names: list[str], venv_path: str):
-    """Install packages in the virtual environment and update the lock file and pyproject.toml."""
+    """
+    Install packages in the virtual environment and update the lock file and pyproject.toml.
+    Args:
+        names (list[str]): List of package names to install.
+        venv_path (str): Path to the virtual environment.
+    Raises:
+        FileNotFoundError: If pip is not found in the virtual environment.
+        RuntimeError: If the pip install command fails.
+        Exception: For any other unexpected errors.
+
+    """
     venv: Path = Path(venv_path)
     if os.name == "nt":  # Windows
         pip_path = venv / "Scripts" / "pip.exe"
@@ -40,7 +49,7 @@ def add(names: list[str], venv_path: str):
         f.write(freeze_output.stdout)
 
     # Update the pyproject.toml file with the new dependencies
-    file = tomllib.load(Path("pyproject.toml").open("rb"))
+    file = toml.load(Path("pyproject.toml"))
     if "dependencies" not in file["project"]:
         file["project"]["dependencies"] = []
     file["project"]["dependencies"].extend(names)
@@ -80,7 +89,7 @@ def remove(names: list[str], venv_path: str):
         f.write(freeze_output.stdout)
 
     # Update the pyproject.toml file by removing the dependencies
-    file = tomllib.load(Path("pyproject.toml").open("rb"))
+    file = toml.load(Path("pyproject.toml"))
     if "dependencies" in file["project"]:
         file["project"]["dependencies"] = [
             dep for dep in file["project"]["dependencies"] if dep not in names
@@ -121,3 +130,54 @@ def install(venv_path: str):
     
     print(f"All dependencies installed successfully from {lock}.")
     rich.print("[green]All dependencies installed successfully.[/green]")
+
+def update(names: list[str], venv_path: str, all: bool = False):
+    """
+    Update packages in the virtual environment and update the lock file and pyproject.toml.
+    Args:
+        names (list[str]): List of package names to update.
+        venv_path (str): Path to the virtual environment.
+    Raises:
+        FileNotFoundError: If pip is not found in the virtual environment.
+        RuntimeError: If the pip install command fails.
+        Exception: For any other unexpected errors.
+    """
+    venv: Path = Path(venv_path)
+    if os.name == "nt":  # Windows
+        pip_path = venv / "Scripts" / "pip.exe"
+    else:  # Linux / macOS
+        pip_path = venv / "bin" / "pip"
+
+    if not pip_path.exists():
+        raise FileNotFoundError(
+            f"pip not found at {pip_path}. \
+            Ensure the virtual environment is set up correctly."
+        )
+    if all:
+        command = f'"{pip_path}" install --upgrade --force-reinstall -r ppmx.lock'
+        print(f"Running command: {command}")
+        result = os.system(command)
+        if result != 0:
+            raise RuntimeError(
+                f"Failed to update all packages. \
+                    Command returned exit code {result}."
+            )
+        names = []
+    else:
+        command = f'"{pip_path}" install --upgrade ' + " ".join(names)
+        print(f"Running command: {command}")
+        result = os.system(command)
+        if result != 0:
+            raise RuntimeError(
+                f"Failed to update packages: {names}. \
+                    Command returned exit code {result}."
+            )
+    lock = Path("ppmx.lock")
+    cmd_freeze = [str(pip_path), "freeze"]
+    freeze_output = subprocess.run(cmd_freeze, capture_output=True, text=True)
+
+    with lock.open("w") as f:
+        f.write(freeze_output.stdout)
+    rich.print(
+        f"[green]Packages {', '.join(names)} updated successfully and ppmx.lock updated.[/green]"
+    )

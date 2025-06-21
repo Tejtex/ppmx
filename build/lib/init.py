@@ -8,7 +8,16 @@ import rich
 
 
 def init():
-    """Initialize the virtual environment."""
+    """
+    Initialize the virtual environment.
+    Create the necessary project files including README.md, pyproject.toml,
+    and src/main.py.
+    Optionally initialize a Git repository.
+    This function prompts the user for various project details such as
+    project name, author, description, and license type.
+    It also creates a virtual environment in the specified path
+    and sets up a basic project structure.
+    """
 
     cwd = pathlib.Path.cwd()
     path = questionary.text(
