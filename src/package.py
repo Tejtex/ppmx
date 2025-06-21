@@ -50,3 +50,44 @@ def add(names: list[str], venv_path: str):
     rich.print(
         f"[green]Packages {', '.join(names)} installed successfully and pyproject.toml updated.[/green]"
     )
+
+def remove(names: list[str], venv_path: str):
+    """Remove packages from the virtual environment and update the lock file and pyproject.toml."""
+    venv: Path = Path(venv_path)
+    if os.name == "nt":  # Windows
+        pip_path = venv / "Scripts" / "pip.exe"
+    else:  # Linux / macOS
+        pip_path = venv / "bin" / "pip"
+
+    if not pip_path.exists():
+        raise FileNotFoundError(
+            f"pip not found at {pip_path}. \
+            Ensure the virtual environment is set up correctly."
+        )
+    command = f'"{pip_path}" uninstall -y ' + " ".join(names)
+    print(f"Running command: {command}")
+    result = os.system(command)
+    if result != 0:
+        raise RuntimeError(
+            f"Failed to uninstall packages: {names}. \
+                Command returned exit code {result}."
+        )
+    lock = Path("ppmx.lock")
+    cmd_freeze = [str(pip_path), "freeze"]
+    freeze_output = subprocess.run(cmd_freeze, capture_output=True, text=True)
+
+    with lock.open("w") as f:
+        f.write(freeze_output.stdout)
+
+    # Update the pyproject.toml file by removing the dependencies
+    file = tomllib.load(Path("pyproject.toml").open("rb"))
+    if "dependencies" in file["project"]:
+        file["project"]["dependencies"] = [
+            dep for dep in file["project"]["dependencies"] if dep not in names
+        ]
+    with Path("pyproject.toml").open("w") as f:
+        toml.dump(file, f)
+    print(f"Packages {names} removed successfully and lock file updated at {lock}.")
+    rich.print(
+        f"[green]Packages {', '.join(names)} removed successfully and pyproject.toml updated.[/green]"
+    )
