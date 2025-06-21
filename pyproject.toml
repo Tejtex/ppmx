@@ -1,0 +1,27 @@
+[project]
+name = "ppmx"
+version = "0.1.0"
+description = "The best python package manager"
+license = "MIT"
+dependencies = [ "click", "toml", "rich", "questionary", "GitPython",]
+[[project.authors]]
+name = "Tejtex"
+
+[build-system]
+requires = [ "setuptools", "wheel",]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+ppmx = "main:cli"
+
+[tool.ppmx]
+venv_path = "./venv"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.ppmx.tasks.dev]
+command = "python src/main.py"
+
+[tool.ppmx.tasks.test]
+command = "pytest"
